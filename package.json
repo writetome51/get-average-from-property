@@ -1,0 +1,30 @@
+{
+  "name": "@writetome51/get-average-from-property",
+  "version": "1.0.0",
+  "description": "Returns average value of particular property found in objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/writetome51/get-average-from-property.git"
+  },
+  "keywords": [
+    "average",
+    "value",
+    "property",
+    "objects"
+  ],
+  "author": "Steve Thompson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/writetome51/get-average-from-property/issues"
+  },
+  "homepage": "https://github.com/writetome51/get-average-from-property#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "basic-data-handling": "~1.0.13",
+    "@writetome51/get-sum-average-product": "~1.0.4"
+  }
+}
