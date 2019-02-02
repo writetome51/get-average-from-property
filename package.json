@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/get-average-from-property",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Returns average value of particular property found in objects",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   "homepage": "https://github.com/writetome51/get-average-from-property#readme",
   "devDependencies": {},
   "dependencies": {
-    "basic-data-handling": "~1.0.13",
-    "@writetome51/get-sum-average-product": "~1.0.4"
+    "@writetome51/get-sum-average-product": "~1.0.4",
+    "@writetome51/get-array-from-property": "~1.1.0"
   }
 }
