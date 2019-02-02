@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/get-average-from-property",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "Returns average value of particular property found in objects",
   "main": "index.js",
   "scripts": {
