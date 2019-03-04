@@ -1,12 +1,11 @@
-# getAverageFromProperty()
 ## getAverageFromProperty(property, objects): number
 
-Returns average value of <b>property</b> found in <b>objects</b>.    
-<b>property</b> is a string that can include dot notation ( i.e,  `'property.subproperty.subsubproperty'` ) .  
-Value of object property must be type 'number' and must be a finite number,  
+Returns average value of `property` found in `objects`.    
+`property` is a string that can include dot notation ( i.e,  `'property.subproperty.subsubproperty'` ) .  
+Value of `property` in each of `objects` must be type 'number' and must be a finite number,  
 or else will error. 
 
-Note:  <b>property</b> does not have to be an object key. It can also be an array index.  
+Note:  `property` does not have to be an object key. It can also be an array index.  
 If you are getting the value of a nested array index, here you need to use dot-notation and not  
 square braces.  Example: `'1.0' instead of [1][0]`
 
@@ -21,8 +20,8 @@ let players = [
 	{name: 'Charlie Soup', strikeouts: 10}
 ];
 
-let averageStrikeouts = getAverageFromProperty('strikeouts', players);
-// averageStrikeouts === 8.333333333333334
+getAverageFromProperty('strikeouts', players);
+    // --> 8.333333333333334
 
 
 players = [
@@ -34,8 +33,8 @@ players = [
 	{stats: {strikeouts: 15}}
 ];
 
-averageStrikeouts = getAverageFromProperty('stats.strikeouts', players);
-// averageStrikeouts === 35.833333333333336
+getAverageFromProperty('stats.strikeouts', players);
+    // --> 35.833333333333336
 
 
 let numberGroups = [
@@ -45,8 +44,8 @@ let numberGroups = [
 	[[31, 35], [36, 40]]
 ];
 // get the average of [1,11,21,31]
-let average = getAverageFromProperty('0.0', numberGroups);
-// average === 16
+getAverageFromProperty('0.0', numberGroups);
+    // --> 16
 
 
 players = [
@@ -58,6 +57,7 @@ players = [
 
 averageStrikeouts = getAverageFromProperty('strikeouts', players);
 // console: 'Error: the array contains a value that is not a number.'
+
 
 players = [
 	{name: 'Kelly Rogers', strikeouts: 2},
