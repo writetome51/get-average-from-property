@@ -1,16 +1,16 @@
-## getAverageFromProperty(property, objects): number
+# getAverageFromProperty(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property: string,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objects<br>): number
 
-Returns average value of `property` found in `objects`.    
-`property` is a string that can include dot notation ( i.e,  `'property.subproperty.subsubproperty'` ) .  
-Value of `property` in each of `objects` must be type 'number' and must be a finite number,  
-or else will error. 
+Returns average value of `property` found in `objects`.   
+Value of `property` in each of `objects` must be type 'number', or else will error.  
 
+Note: `property` is a string that can include dot notation  
+( i.e,  `'property.subproperty.subsubproperty'` ) .  
 Note:  `property` does not have to be an object key. It can also be an array index.  
-If you are getting the value of a nested array index, here you need to use dot-notation and not  
-square braces.  Example: `'1.0' instead of [1][0]`
+If getting the value of a nested array index, here you need to use dot-notation  
+and not square braces.  Example: `'1.0' instead of [1][0]`
 
 ## Examples
-```
+```js
 let players = [
 	{name: 'Bill Mill', strikeouts: 10},
 	{name: 'Milly Buttons', strikeouts: 12},
@@ -76,13 +76,9 @@ averageStrikeouts = getAverageFromProperty('strikeouts', players);
 You must have npm installed first.  Then, in the command line:
 
 ```bash
-npm install @writetome51/get-average-from-property
+npm i @writetome51/get-average-from-property
 ```
 ## Loading
-```
-// If using TypeScript:
+```js
 import {getAverageFromProperty} from '@writetome51/get-average-from-property';
-// If using ES5 JavaScript:
-var getAverageFromProperty = 
-	require('@writetome51/get-average-from-property').getAverageFromProperty;
 ```

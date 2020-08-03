@@ -1,8 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var index_1 = require("./index");
+import { getAverageFromProperty } from './index';
 // Test 1:
-var players = [
+let players = [
     { name: 'Bill Mill', strikeouts: 10 },
     { name: 'Milly Buttons', strikeouts: 12 },
     { name: 'Mick Stan', strikeouts: 5 },
@@ -10,7 +8,7 @@ var players = [
     { name: 'Angus Beef', strikeouts: 11 },
     { name: 'Charlie Soup', strikeouts: 10 }
 ];
-var averageStrikeouts = index_1.getAverageFromProperty('strikeouts', players);
+let averageStrikeouts = getAverageFromProperty('strikeouts', players);
 if (averageStrikeouts === 8.333333333333334)
     console.log('test 1 passed');
 else
@@ -24,26 +22,26 @@ players = [
     { stats: { strikeouts: 10 } },
     { stats: { strikeouts: 15 } }
 ];
-averageStrikeouts = index_1.getAverageFromProperty('stats.strikeouts', players);
+averageStrikeouts = getAverageFromProperty('stats.strikeouts', players);
 if (averageStrikeouts === 35.833333333333336)
     console.log('test 2 passed');
 else
     console.log('test 2 FAILED');
 // Test 2A: make sure it can handle indexes as properties
-var numberGroups = [
+let numberGroups = [
     [[1, 5], [6, 10]],
     [[11, 15], [16, 20]],
     [[21, 25], [26, 30]],
     [[31, 35], [36, 40]]
 ];
 // get the average of [1,11,21,31]
-var average = index_1.getAverageFromProperty('0.0', numberGroups);
+let average = getAverageFromProperty('0.0', numberGroups);
 if (average === 16)
     console.log('test 2A passed');
 else
     console.log('test 2A FAILED');
 // Test 3:
-var errorTriggered = false;
+let errorTriggered = false;
 players = [
     { name: 'Bill Mill', strikeouts: '100' },
     { name: 'Milly Buttons', strikeouts: 12 },
@@ -53,7 +51,7 @@ players = [
     { name: 'Charlie Soup', strikeouts: 10 }
 ];
 try {
-    averageStrikeouts = index_1.getAverageFromProperty('strikeouts', players);
+    averageStrikeouts = getAverageFromProperty('strikeouts', players);
 }
 catch (e) {
     errorTriggered = true;
@@ -74,7 +72,7 @@ players = [
     { name: 'Willy' } // will trigger error.
 ];
 try {
-    averageStrikeouts = index_1.getAverageFromProperty('strikeouts', players);
+    averageStrikeouts = getAverageFromProperty('strikeouts', players);
 }
 catch (e) {
     errorTriggered = true;
@@ -95,7 +93,7 @@ players = [
     { name: 'Willy', strikeouts: 10 }
 ];
 try {
-    averageStrikeouts = index_1.getAverageFromProperty('', players);
+    averageStrikeouts = getAverageFromProperty('', players);
 }
 catch (e) {
     errorTriggered = true;
@@ -107,7 +105,7 @@ else
 // Test 6:
 errorTriggered = false;
 try {
-    averageStrikeouts = index_1.getAverageFromProperty('strikeouts', []);
+    averageStrikeouts = getAverageFromProperty('strikeouts', []);
 }
 catch (e) {
     errorTriggered = true;
@@ -118,11 +116,11 @@ else
     console.log('test 6 FAILED');
 // Test 7
 players = [];
-for (var i = 0; i < 100000; ++i) {
+for (let i = 0; i < 100000; ++i) {
     players.push({ stats: { strikeouts: 10 } });
 }
 // avg is 10.
-averageStrikeouts = index_1.getAverageFromProperty('stats.strikeouts', players);
+averageStrikeouts = getAverageFromProperty('stats.strikeouts', players);
 if (averageStrikeouts === 10)
     console.log('test 7 passed');
 else
