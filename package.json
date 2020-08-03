@@ -3,11 +3,7 @@
   "version": "2.0.0",
   "description": "Returns average value of particular property found in objects",
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc"
-  },
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/writetome51/get-average-from-property.git"

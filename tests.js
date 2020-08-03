@@ -1,4 +1,5 @@
-import { getAverageFromProperty } from './index';
+import { getAverageFromProperty } from './index.js';
+
 // Test 1:
 let players = [
     { name: 'Bill Mill', strikeouts: 10 },
@@ -13,6 +14,8 @@ if (averageStrikeouts === 8.333333333333334)
     console.log('test 1 passed');
 else
     console.log('test 1 FAILED');
+
+
 // Test 2: make sure it can accept properties of properties.
 players = [
     { stats: { strikeouts: 100 } },
@@ -27,6 +30,8 @@ if (averageStrikeouts === 35.833333333333336)
     console.log('test 2 passed');
 else
     console.log('test 2 FAILED');
+
+
 // Test 2A: make sure it can handle indexes as properties
 let numberGroups = [
     [[1, 5], [6, 10]],
@@ -40,6 +45,8 @@ if (average === 16)
     console.log('test 2A passed');
 else
     console.log('test 2A FAILED');
+
+
 // Test 3:
 let errorTriggered = false;
 players = [
@@ -60,6 +67,8 @@ if (errorTriggered)
     console.log('test 3 passed');
 else
     console.log('test 3 FAILED');
+
+
 // Test 4:
 errorTriggered = false;
 players = [
@@ -81,6 +90,8 @@ if (errorTriggered)
     console.log('test 4 passed');
 else
     console.log('test 4 FAILED');
+
+
 // Test 5:
 errorTriggered = false;
 players = [
@@ -102,6 +113,8 @@ if (errorTriggered)
     console.log('test 5 passed');
 else
     console.log('test 5 FAILED');
+
+
 // Test 6:
 errorTriggered = false;
 try {
@@ -114,6 +127,8 @@ if (errorTriggered)
     console.log('test 6 passed');
 else
     console.log('test 6 FAILED');
+
+
 // Test 7
 players = [];
 for (let i = 0; i < 100000; ++i) {
